@@ -1,18 +1,20 @@
-package classes.adv.equip;
+package com.github.pikachudawish.adv.equip;
 
-public class helmet {
+public class weapon {
     private String name;
 
     private int lvl;
     private double exp;
 
-    private double def;
+    private double pd;
+    private double md;
 
-    public helmet() {
+    public weapon() {
         this.name = null;
         this.lvl = 0;
         this.exp = 0.0;
-        this.def = 0.0;
+        this.pd = 0.0;
+        this.md = 0.0;
     }
 
     public String getName() {return name;}
@@ -24,6 +26,9 @@ public class helmet {
     public double getExp() {return exp;}
     public void setExp(double exp) {this.exp = exp;}
 
-    public double getDef() {return def;}
-    public void setDef(int def) {this.def = def;}
+    public double getPd() {return pd;}
+    public void setPd(double pd) {this.pd = pd;}
+
+    public double getMd() {return md;}
+    public void setMd(double md) {this.md = md;}
 }

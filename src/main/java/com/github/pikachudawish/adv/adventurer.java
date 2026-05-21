@@ -1,4 +1,4 @@
-package classes.adv;
+package com.github.pikachudawish.adv;
 
 public class adventurer {
     private int id;

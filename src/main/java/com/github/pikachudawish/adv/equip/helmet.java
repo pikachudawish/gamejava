@@ -1,6 +1,6 @@
-package classes.adv.equip;
+package com.github.pikachudawish.adv.equip;
 
-public class chestplate {
+public class helmet {
     private String name;
 
     private int lvl;
@@ -8,7 +8,7 @@ public class chestplate {
 
     private double def;
 
-    public chestplate() {
+    public helmet() {
         this.name = null;
         this.lvl = 0;
         this.exp = 0.0;

@@ -1,4 +1,4 @@
-package classes.adv.equip;
+package com.github.pikachudawish.adv.equip;
 
 public class boots {
     private String name;

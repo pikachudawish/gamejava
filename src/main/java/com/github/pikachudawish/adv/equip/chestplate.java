@@ -1,6 +1,6 @@
-package classes.adv.equip;
+package com.github.pikachudawish.adv.equip;
 
-public class armlet {
+public class chestplate {
     private String name;
 
     private int lvl;
@@ -8,7 +8,7 @@ public class armlet {
 
     private double def;
 
-    public armlet() {
+    public chestplate() {
         this.name = null;
         this.lvl = 0;
         this.exp = 0.0;
@@ -26,6 +26,4 @@ public class armlet {
 
     public double getDef() {return def;}
     public void setDef(int def) {this.def = def;}
-
-
 }

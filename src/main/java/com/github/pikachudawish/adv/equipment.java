@@ -1,6 +1,6 @@
-package classes.adv;
+package com.github.pikachudawish.adv;
 
-import classes.adv.equip.*;
+import com.github.pikachudawish.adv.equip.*;
 
 public class equipment {
     private helmet h;
