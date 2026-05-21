@@ -1,0 +1,27 @@
+package classes.adv;
+
+public class moves {
+    private int move1;
+    private int move2;
+    private int move3;
+    private int move4;
+
+    public moves() {
+        this.move1 = 0;
+        this.move2 = 0;
+        this.move3 = 0;
+        this.move4 = 0;
+    }
+
+    public int getMove1() {return move1;}
+    public void setMove1(int move1) {this.move1 = move1;}
+
+    public int getMove2() {return move2;}
+    public void setMove2(int move2) {this.move2 = move2;}
+
+    public int getMove3() {return move3;}
+    public void setMove3(int move3) {this.move3 = move3;}
+
+    public int getMove4() {return move4;}
+    public void setMove4(int move4) {this.move4 = move4;}
+}
