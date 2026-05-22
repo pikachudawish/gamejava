@@ -24,7 +24,7 @@ public class rpggame extends Canvas implements Runnable {
 
     private void render() {
         BufferStrategy bs = getBufferStrategy();
-        if (bs == null) {
+        if(bs == null) {
             createBufferStrategy(3);
             return;
         }
@@ -40,7 +40,7 @@ public class rpggame extends Canvas implements Runnable {
     }
 
     public static void main(String[] args) {
-        JFrame janela = new JFrame("Meu Jogo Java");
+        JFrame janela = new JFrame("RPG Game");
         rpggame game = new rpggame();
 
         janela.add(game);
