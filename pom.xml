@@ -10,7 +10,9 @@
     <modules>
         <module>common</module>
         <module>client</module>
-        <module>server</module>
+        <module>server-db</module>
+        <module>server-game</module>
+        <module>server-db</module>
     </modules>
 
     <properties>
