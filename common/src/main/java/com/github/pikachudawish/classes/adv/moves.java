@@ -1,4 +1,4 @@
-package com.github.pikachudawish.adv;
+package com.github.pikachudawish.classes.adv;
 
 public class moves {
     private int move1;

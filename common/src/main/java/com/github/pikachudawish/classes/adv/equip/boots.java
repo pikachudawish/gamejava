@@ -1,20 +1,18 @@
-package com.github.pikachudawish.adv.equip;
+package com.github.pikachudawish.classes.adv.equip;
 
-public class weapon {
+public class boots {
     private String name;
 
     private int lvl;
     private double exp;
 
-    private double pd;
-    private double md;
+    private double def;
 
-    public weapon() {
+    public boots() {
         this.name = null;
         this.lvl = 0;
         this.exp = 0.0;
-        this.pd = 0.0;
-        this.md = 0.0;
+        this.def = 0.0;
     }
 
     public String getName() {return name;}
@@ -26,9 +24,6 @@ public class weapon {
     public double getExp() {return exp;}
     public void setExp(double exp) {this.exp = exp;}
 
-    public double getPd() {return pd;}
-    public void setPd(double pd) {this.pd = pd;}
-
-    public double getMd() {return md;}
-    public void setMd(double md) {this.md = md;}
+    public double getDef() {return def;}
+    public void setDef(int def) {this.def = def;}
 }

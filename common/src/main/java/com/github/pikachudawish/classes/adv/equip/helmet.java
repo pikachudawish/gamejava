@@ -1,4 +1,4 @@
-package com.github.pikachudawish.adv.equip;
+package com.github.pikachudawish.classes.adv.equip;
 
 public class helmet {
     private String name;
