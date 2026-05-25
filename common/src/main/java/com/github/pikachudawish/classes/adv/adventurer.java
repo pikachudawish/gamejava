@@ -7,6 +7,7 @@ public class adventurer {
     private stats s;
     private moves m;
     private equipment e;
+    private resources r;
 
     public adventurer(int id, String name) {
         this.id = id;
@@ -14,6 +15,7 @@ public class adventurer {
         this.s = new stats();
         this.m = new moves();
         this.e = new equipment();
+        this.r = new resources();
     }
 
     public int getId() {return id;}
@@ -30,4 +32,7 @@ public class adventurer {
 
     public equipment getE() {return e;}
     public void setE(equipment e) {this.e = e;}
+
+    public resources getR() {return r;}
+    public void setR(resources r) {this.r = r;}
 }
