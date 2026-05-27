@@ -36,6 +36,7 @@
             <version>4.2.5.Final</version>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-codec-base</artifactId>

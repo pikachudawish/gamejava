@@ -10,6 +10,7 @@ public class pkg implements java.io.Serializable{
     @Serial
     private static final long serialVersionUID = 1L;
 
+    private int transactionID;
     private pkgtype type;
 
     private adventurer a;
@@ -26,50 +27,62 @@ public class pkg implements java.io.Serializable{
         this.type = pkgtype.HEARTBEAT;
     }
 
-    public pkg(pkgtype type, adventurer a) {
+    public pkg(int transactionID, pkgtype type, adventurer a) {
+        this.transactionID = transactionID;
         this.type = type;
         this.a = a;
     }
 
-    public pkg(pkgtype type, stats s) {
+    public pkg(int transactionID, pkgtype type, stats s) {
+        this.transactionID = transactionID;
         this.type = type;
         this.s = s;
     }
 
-    public pkg(pkgtype type, moves m) {
+    public pkg(int transactionID, pkgtype type, moves m) {
+        this.transactionID = transactionID;
         this.type = type;
         this.m = m;
     }
 
-    public pkg(pkgtype type, equipment e) {
+    public pkg(int transactionID, pkgtype type, equipment e) {
+        this.transactionID = transactionID;
         this.type = type;
         this.e = e;
     }
 
-    public pkg(pkgtype type, armlet ae) {
+    public pkg(int transactionID, pkgtype type, armlet ae) {
+        this.transactionID = transactionID;
         this.type = type;
         this.ae = ae;
     }
 
-    public pkg(pkgtype type, helmet he) {
+    public pkg(int transactionID, pkgtype type, helmet he) {
+        this.transactionID = transactionID;
         this.type = type;
         this.he = he;
     }
 
-    public pkg(pkgtype type, chestplate ce) {
+    public pkg(int transactionID, pkgtype type, chestplate ce) {
+        this.transactionID = transactionID;
         this.type = type;
         this.ce = ce;
     }
 
-    public pkg(pkgtype type, boots be) {
+    public pkg(int transactionID, pkgtype type, boots be) {
+        this.transactionID = transactionID;
         this.type = type;
         this.be = be;
     }
 
-    public pkg(pkgtype type, resources r) {
+    public pkg(int transactionID, pkgtype type, resources r) {
+        this.transactionID = transactionID;
         this.type = type;
         this.r = r;
     }
+
+    public int getTransactionID() {return transactionID;}
+    public void setTransactionID(int transactionID) {this.transactionID = transactionID;}
 
     public pkgtype getType() {return type;}
     public void setType(pkgtype type) {this.type = type;}
@@ -100,4 +113,6 @@ public class pkg implements java.io.Serializable{
 
     public resources getR() {return r;}
     public void setR(resources r) {this.r = r;}
+
+
 }

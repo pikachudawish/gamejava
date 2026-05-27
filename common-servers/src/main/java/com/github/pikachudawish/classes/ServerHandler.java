@@ -1,20 +1,18 @@
 package com.github.pikachudawish.classes;
 
-import com.github.pikachudawish.classes.dbManager;
-
+import com.github.pikachudawish.classes.pkg.*;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
-import java.sql.Connection;
-
 public class ServerHandler extends ChannelInboundHandlerAdapter {
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+    public void channelRead(ChannelHandlerContext ctx, pkg p) throws Exception {
+        switch (p.getType()) {
+            case HEARTBEAT ->
 
 
-        try (Connection conn = dbManager.getConnection()) {
+                break;
 
-        } catch (Exception e) {
-            //e.printStackTrace();
+            default -> System.err.println("ERROR");
         }
     }
 }

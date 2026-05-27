@@ -7,10 +7,10 @@ import io.netty.channel.nio.NioIoHandler;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
-public class serverDB {
+public class serverGame {
     private int port;
 
-    public serverDB(int port) {
+    public serverGame(int port) {
         this.port = port;
     }
 
@@ -50,8 +50,8 @@ public class serverDB {
     }
 
     public static void main(String[] args) throws Exception {
-        int port = 6969;
+        int port = 6767;
 
-        new serverDB(port).run();
+        new serverGame(port).run();
     }
 }
