@@ -23,4 +23,10 @@ public class dbManager {
     public static Connection getConnection() throws Exception {
         return dataSource.getConnection();
     }
+
+    public static void shutdown() {
+        if (dataSource != null) {
+            dataSource.close();
+        }
+    }
 }

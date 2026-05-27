@@ -1,6 +1,6 @@
 package com.github.pikachudawish;
 
-import com.pikachudawish.classes.ServerHandler;
+import com.github.pikachudawish.classes.ServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioIoHandler;
@@ -25,11 +25,16 @@ public class serverDB {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) {
-                            // É AQUI que a lógica começa: a "Pipeline"
-                            // 1. Decoder (Transforma bytes em Objeto)
-                            // 2. Encoder (Transforma Objeto em bytes)
-                            // 3. O TEU HANDLER (A lógica do RPG/DB)
-                            ch.pipeline().addLast(new ServerHandler());
+                            ChannelPipeline pipeline = ch.pipeline();
+
+                            //DECODER
+                            pipeline.addLast(new io.netty.handler.codec.DelimiterBasedFrameDecoder(8192, io.netty.handler.codec.Delimiters.lineDelimiter()));
+                            pipeline.addLast(new io.netty.handler.codec.string.StringDecoder());
+
+                            //ENCODER
+                            pipeline.addLast(new io.netty.handler.codec.string.StringEncoder());
+
+                            pipeline.addLast(new ServerHandler());
                         }
                     })
                     .option(ChannelOption.SO_BACKLOG, 128)
