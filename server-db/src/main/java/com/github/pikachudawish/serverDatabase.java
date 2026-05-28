@@ -3,8 +3,8 @@ package com.github.pikachudawish;
 import com.github.pikachudawish.classes.*;
 import io.netty.channel.ChannelHandler;
 
-public class serverDB extends Server{
-    public serverDB(int port) {
+public class serverDatabase extends Server{
+    public serverDatabase(int port) {
         super(port);
     }
 
@@ -16,6 +16,6 @@ public class serverDB extends Server{
     public static void main(String[] args) throws Exception {
         int port = 6969;
 
-        new serverDB(port).run();
+        new serverDatabase(port).run();
     }
 }

@@ -1,7 +1,16 @@
 package com.github.pikachudawish.classes;
 
-import io.netty.channel.ChannelInboundHandlerAdapter;
+import com.github.pikachudawish.classes.pkg.Pkg;
 
-public class GameHandler extends ChannelInboundHandlerAdapter {
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.SimpleChannelInboundHandler;
 
+public class GameHandler extends SimpleChannelInboundHandler<Pkg> {
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, Pkg pkg) throws Exception {
+        switch (pkg.getType()) {
+
+        }
+    }
 }

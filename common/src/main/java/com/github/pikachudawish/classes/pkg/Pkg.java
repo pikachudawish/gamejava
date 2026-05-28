@@ -6,7 +6,7 @@ import com.github.pikachudawish.enums.pkgtype;
 
 import java.io.Serial;
 
-public class pkg implements java.io.Serializable{
+public class Pkg implements java.io.Serializable{
     @Serial
     private static final long serialVersionUID = 1L;
 
@@ -23,59 +23,59 @@ public class pkg implements java.io.Serializable{
     private boots be;
     private resources r;
 
-    public pkg() {
+    public Pkg() {
         this.type = pkgtype.HEARTBEAT;
     }
 
-    public pkg(int transactionID, pkgtype type, adventurer a) {
+    public Pkg(int transactionID, pkgtype type, adventurer a) {
         this.transactionID = transactionID;
         this.type = type;
         this.a = a;
     }
 
-    public pkg(int transactionID, pkgtype type, stats s) {
+    public Pkg(int transactionID, pkgtype type, stats s) {
         this.transactionID = transactionID;
         this.type = type;
         this.s = s;
     }
 
-    public pkg(int transactionID, pkgtype type, moves m) {
+    public Pkg(int transactionID, pkgtype type, moves m) {
         this.transactionID = transactionID;
         this.type = type;
         this.m = m;
     }
 
-    public pkg(int transactionID, pkgtype type, equipment e) {
+    public Pkg(int transactionID, pkgtype type, equipment e) {
         this.transactionID = transactionID;
         this.type = type;
         this.e = e;
     }
 
-    public pkg(int transactionID, pkgtype type, armlet ae) {
+    public Pkg(int transactionID, pkgtype type, armlet ae) {
         this.transactionID = transactionID;
         this.type = type;
         this.ae = ae;
     }
 
-    public pkg(int transactionID, pkgtype type, helmet he) {
+    public Pkg(int transactionID, pkgtype type, helmet he) {
         this.transactionID = transactionID;
         this.type = type;
         this.he = he;
     }
 
-    public pkg(int transactionID, pkgtype type, chestplate ce) {
+    public Pkg(int transactionID, pkgtype type, chestplate ce) {
         this.transactionID = transactionID;
         this.type = type;
         this.ce = ce;
     }
 
-    public pkg(int transactionID, pkgtype type, boots be) {
+    public Pkg(int transactionID, pkgtype type, boots be) {
         this.transactionID = transactionID;
         this.type = type;
         this.be = be;
     }
 
-    public pkg(int transactionID, pkgtype type, resources r) {
+    public Pkg(int transactionID, pkgtype type, resources r) {
         this.transactionID = transactionID;
         this.type = type;
         this.r = r;

@@ -1,6 +1,15 @@
 package com.github.pikachudawish.classes;
 
-import io.netty.channel.ChannelInboundHandlerAdapter;
+import com.github.pikachudawish.classes.pkg.Pkg;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.SimpleChannelInboundHandler;
 
-public class DatabaseHandler extends ChannelInboundHandlerAdapter {
+public class DatabaseHandler extends SimpleChannelInboundHandler<Pkg> {
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, Pkg pkg) throws Exception {
+        switch (pkg.getType()) {
+
+        }
+    }
 }
