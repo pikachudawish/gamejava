@@ -8,9 +8,12 @@ import io.netty.channel.SimpleChannelInboundHandler;
 public class GameHandler extends SimpleChannelInboundHandler<Pkg> {
 
     @Override
-    protected void channelRead0(ChannelHandlerContext channelHandlerContext, Pkg pkg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, Pkg pkg) throws Exception {
         switch (pkg.getType()) {
-
+            case HEARTBEAT -> {
+                System.out.println("Ping recebido: " + ctx.channel().remoteAddress());
+                break;
+            }
         }
     }
 }

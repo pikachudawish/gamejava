@@ -1,6 +1,7 @@
 package com.github.pikachudawish.classes;
 
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioIoHandler;
 import io.netty.channel.socket.SocketChannel;
@@ -36,12 +37,17 @@ public abstract class Server {
                         public void initChannel(SocketChannel ch) {
                             ChannelPipeline pipeline = ch.pipeline();
 
+                            pipeline.addLast(new IdleStateHandler(60, 30, 0));
+
                             //DECODER
                             pipeline.addLast(new io.netty.handler.codec.DelimiterBasedFrameDecoder(8192, io.netty.handler.codec.Delimiters.lineDelimiter()));
                             pipeline.addLast(new io.netty.handler.codec.string.StringDecoder());
 
                             //ENCODER
                             pipeline.addLast(new io.netty.handler.codec.string.StringEncoder());
+
+                            //HEARTBEAT HANDLER
+                            pipeline.addLast(new HeartbeatHandler());
 
                             //HANDLER
                             pipeline.addLast(getHandler());
